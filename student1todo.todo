@@ -1,0 +1,29 @@
+Todo:
+    Tipovi korisnika:
+        2:
+            ☐ Registrovani korisnici (mogu da rezervisu karte, daju ocenu itd...)
+        
+        3:
+            ☐ Administrator aviokompanije (definisu destinacije na kojima posluju, cene karata itd...)
+
+    Funkcije:
+        2.3:
+            ☐ Profil korisnika
+
+        2.4:
+            ☐ Profil aviokompanije
+        
+        2.6:
+            ☐ Home page za registrovanog korisnika
+
+        2.7:
+            ☐ Postupak rezervacije letova
+
+        2.9:
+            ☐ Postupak brze rezervacije avionskih karata
+
+        2.11:
+            ☐ Pretraga i filtriranje letova
+
+        3.5:
+            ☐ Lokacijski servisi

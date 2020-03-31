@@ -1,0 +1,35 @@
+Todo:
+    Tipovi korisnika:
+        1:
+            ☐ Neregistrovani korisnici (mogu da vide samo informacije o aviokomp., letovima, rent-car itd...)
+        
+        4:
+            ☐ Administraotr rent-a-car servisa (definisu vozila, cenovnik, itd...)
+        
+        5:
+            ☐ Administrator sistema (registruju aviokompanije, renta-a-car servise i njihove admine)
+
+    Funkcije:
+        2.1:
+            ☐ Prikaz informacija neregistrovanim korisnicima
+
+        2.2:
+            ☐ Registracija korisnika i prijavljivanje na sistem
+
+        2.5:
+            ☐ Profil rent-a-car servisa
+
+        2.8:
+            ☐ Postupak rezervacije vozila
+
+        2.10:
+            ☐ Postupak brze rezervacije vozila
+
+        2.12:
+            ☐ Pretraga rent-a-car servisa
+
+        2.13:
+            ☐ Postupak ocenjivanja
+
+        2.14:
+            ☐ Profil administratora sistema
