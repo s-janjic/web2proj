@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { FlightsComponent } from './flights/flights.component';
+import { CarsComponent } from './cars/cars.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,14 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent
   },
+  {
+    path: 'flights',
+    component: FlightsComponent
+  },
+  {
+    path: 'cars',
+    component: CarsComponent
+  }
 ];
 
 @NgModule({
