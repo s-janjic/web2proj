@@ -6,17 +6,20 @@
         <thead>
           <tr>
             <th scope="col">Type</th>
-            <th scope="col">Column heading</th>
-            <th scope="col">Column heading</th>
-            <th scope="col">Column heading</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Routes</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="table-light">
-            <th scope="row">Light</th>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
+          <tr class="table-light" *ngFor="let aircom of airlines">
+            
+              <th scope="row">{{aircom.typeofair}}</th>
+              <td>{{aircom.name}}</td>
+              <td>{{aircom.address}}</td>
+              <td>{{aircom.rating}}</td>
+              <td><button class="btn btn-primary btn-sm">Show routes</button></td>
           </tr>
         </tbody>
       </table>
