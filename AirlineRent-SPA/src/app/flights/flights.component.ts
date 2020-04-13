@@ -28,5 +28,5 @@ export class FlightsComponent implements OnInit {
   getValueFromTrip(){
     
   }
-  
+
 }
