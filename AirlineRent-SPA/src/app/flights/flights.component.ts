@@ -16,5 +16,5 @@ export class FlightsComponent implements OnInit {
   showflights(){
     this.vidimse = true;
   }
-  
+
 }
