@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlightsComponent implements OnInit {
 
+  vidimse: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showflights(){
+    this.vidimse = true;
+  }
+  
 }
