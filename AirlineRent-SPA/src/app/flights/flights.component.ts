@@ -7,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlightsComponent implements OnInit {
 
-  vidimse: boolean = false;
+  vrsta: string[] = [
+    'Round Trip',
+    'One way Trip',
+  ];
+  index: number;
+  
+  roundtrip: boolean = false;
+  onewaytrip: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   showflights(){
-    this.vidimse = true;
+    this.roundtrip = true;
+  }
+
+  getValueFromTrip(){
+    
   }
   
 }

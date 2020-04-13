@@ -7,15 +7,11 @@
         <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="form-group">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-primary active">
-                              <input type="radio" autocomplete="off" checked="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Round Trip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </label>
-                            <label class="btn btn-outline-primary">
-                              <input type="radio" autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One-way Trip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </label>
-                            
-                          </div>
+                        <select class="form-control" ngControl="triptype">
+                            <option *ngFor="let op of vrsta">
+                                {{op}}
+                            </option>
+                        </select>
                     </div>
                 </div>
                 
@@ -92,11 +88,12 @@
                     <input type="date" class="form-control">
                 </div>
                 </div>
-                <button class="btn btn-primary" (click)="showflights()" type="button">Search flights</button>
+                <button class="btn btn-primary" (click)="getValueFromTrip()" type="button">Search flights</button>
         </div>
     </div>
 </form>
-<ng-template [ngIf]="vidimse==true">
+
+<ng-template [ngIf]="roundtrip==true">
     <form style="margin-top: 25px; margin-left: 25px; margin-right: 25px;" >
         <div class="row" >
             <div class="col-sm-6">
@@ -145,5 +142,33 @@
             </div>
         </div>
        
+    </form>
+</ng-template>
+<ng-template [ngIf]="onewaytrip==true">
+    <form style="margin-top: 25px; margin-left: 25px; margin-right: 25px;" >
+        <div class="row" >
+            <div class="col-sm-12">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">From</th>
+                        <th scope="col">To</th>
+                        <th scope="col">Departure</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+    
+                        <tr class="table-light">
+                            <th scope="row">Light</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </form>
 </ng-template>
