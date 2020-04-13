@@ -36,10 +36,25 @@
   cursor: pointer;
 }
 
+.btnFacebook {
+  width: 48%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
 .login-form-1 .btnSubmit {
   font-weight: 600;
   color: #fff;
-  background-color: #0062cc;
+  background-color: #0c41d3;
+}
+
+.login-form-1 .btnFacebook {
+  font-weight: 600;
+  color: #fff;
+  background-color: #2191c5;
 }
 
 .login-form-2 .btnSubmit {

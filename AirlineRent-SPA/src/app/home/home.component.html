@@ -1,43 +1,65 @@
 <div class="container move-down">
   <div class="row">
-    <div class="col-lg-12">
-      <h2>You're the reason we fly!</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 move-down">
-      <div class="card border-primary mb-3" style="max-width: 20rem;">
-        <div class="card-header">Cheap services</div>
-        <div class="card-body">
-          <h4 class="card-title">Best Deals</h4>
-          <p class="card-text">We’re providing flexible options if you need to change or cancel plans, and we’ve
-            taken steps to ensure your safety from before takeoff to after landing.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 move-down">
-      <div class="card border-primary mb-3" style="max-width: 20rem;">
-        <div class="card-header">5* Reviews</div>
-        <div class="card-body">
-          <h4 class="card-title">Best Deals</h4>
-          <p class="card-text">We’re providing flexible options if you need to change or cancel plans, and we’ve
-            taken steps to ensure your safety from before takeoff to after landing.</p>
-        </div>
-      </div>
+    <div class="col">
+      <h3>Airline Company Info</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <th scope="row">Light</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="card border-primary mb-3 move-down" style="max-width: 20rem;">
-      <div class="card-header">24/7 Support</div>
-      <div class="card-body">
-        <h4 class="card-title">Contact us Email</h4>
-        <p class="card-text">
-          We're always onlie for our clients to give you best possible experience.
-          Contact us at anytime and we will reach you within some minutes.
-          Emai: <strong>info@united.com</strong>
-        </p>
-      </div>
+    <div class="col">
+      <h3>{{ rentacar.serviceName }}</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Address</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Filijale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <td>{{ rentacar.address }}</td>
+            <td>{{ rentacar.description }}</td>
+            <td>{{ rentacar.rating }}</td>
+            <td><button class="btn btn-sm btn-primary">Show All</button></td>
+          </tr>
+          <tr class="table-dark">
+            <td colspan="4" class="text-center">Available Cars</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="col">Brand</th>
+            <th scope="col">Model</th>
+            <th scope="col">Year</th>
+            <th scope="col">Price per Day</th>
+          </tr>
+          <tr class="table-light" *ngFor="let car of rentacar.carList">
+            <!-- samo prikaz ako je isAvailable = true -->
+            <ng-template [ngIf]="car.isAvailable">
+              <td>{{ car.brand }}</td>
+              <td>{{ car.model }}</td>
+              <td>{{ car.year }}</td>
+              <td class="text-center">{{ car.dailyPrice }}$</td>
+            </ng-template>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Rentacar } from '../entities/rentacar/rentacar';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public rentacar: Rentacar = new Rentacar('UNITED Rent-a-Car', 'Bulevar BB', 'Promo description', 4.6);
 
   constructor() { }
 
