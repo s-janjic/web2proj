@@ -88,10 +88,11 @@
                     <input type="date" class="form-control">
                 </div>
                 </div>
-                <button class="btn btn-primary" (click)="getValueFromTrip()" type="button">Search flights</button>
+                <button class="btn btn-primary" (click)="showflights()" type="button">Search flights</button>
         </div>
     </div>
 </form>
+
 
 <ng-template [ngIf]="roundtrip==true">
     <form style="margin-top: 25px; margin-left: 25px; margin-right: 25px;" >
@@ -109,11 +110,12 @@
                     </thead>
                     <tbody>
     
-                        <tr class="table-light">
-                            <th scope="row">Light</th>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
+                        <tr class="table-light" *ngFor="let fly of routes">
+                            <th scope="row">{{fly.type}}</th>
+                            <td>{{fly.from}}</td>
+                            <td>{{fly.to}}</td>
+                            <td [(ngModel)]="datum" name="date">{{datum | date : 'dd.MM.yyyy.'}}</td>
+                            <td>{{fly.price}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -131,11 +133,12 @@
                     </thead>
                     <tbody>
     
-                        <tr class="table-light">
-                            <th scope="row">Light</th>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
+                        <tr class="table-light" *ngFor="let fly of routes">
+                            <th scope="row">{{fly.type}}</th>
+                            <td>{{fly.from}}</td>
+                            <td>{{fly.to}}</td>
+                            <td [(ngModel)]="datum" name="date">{{datum | date : 'dd.MM.yyyy.'}}</td>
+                            <td>{{fly.price}}</td>
                         </tr>
                     </tbody>
                 </table>
