@@ -19,7 +19,7 @@ import { CarsComponent } from './cars/cars.component';
     HomeComponent,
     RegisterComponent,
     FlightsComponent,
-    CarsComponent
+    CarsComponent,
   ],
   imports: [
     BrowserModule,

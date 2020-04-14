@@ -63,7 +63,40 @@
           </div>
         </div>
 
-      <button class="btn btn-primary">Search cars</button>
+      <button class="btn btn-primary" (click)="searchCars()">Search cars</button>
     </div>
   </div>
 </form>
+
+<ng-template [ngIf]="isFindCar">
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>Example search</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Brand</th>
+              <th scope="col">Model</th>
+              <th scope="col">Year</th>
+              <th scope="col">Price per Day</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-light" *ngFor="let car of exampleCarListSearch">
+              <!-- samo prikaz ako je isAvailable = true -->
+              <ng-template [ngIf]="car.isAvailable">
+                <td>{{ car.brand }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.year }}</td>
+                <td>{{ car.dailyPrice }}$</td>
+              </ng-template>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
