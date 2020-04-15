@@ -4,7 +4,7 @@ export class Car {
     public year: number;
     public dailyPrice: number;
     public isAvailable: boolean;
-
+    
     constructor(brand: string, model: string, year: number, dailyPrice: number, isAvailable: boolean = true) {
         this.brand = brand;
         this.model = model;
