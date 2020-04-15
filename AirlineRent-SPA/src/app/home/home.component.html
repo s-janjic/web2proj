@@ -41,7 +41,8 @@
             <td>{{ rentacar.address }}</td>
             <td>{{ rentacar.description }}</td>
             <td>{{ rentacar.rating }}</td>
-            <td><button class="btn btn-sm btn-primary">Show All</button></td>
+            <td><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#filijaleModal">Show All</button>
+            </td>
           </tr>
           <tr class="table-dark">
             <td colspan="4" class="text-center">Available Cars</td>
@@ -63,6 +64,29 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
+
+<!-- Filijale Modal -->
+<div class="modal fade" id="filijaleModal" tabindex="-1" role="dialog" aria-labelledby="filijaleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Locations where you can find us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li *ngFor="let f of rentacar.filijale">{{ f }}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>

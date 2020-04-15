@@ -12,7 +12,12 @@ export class Rentacar {
         new Car('Mercedes', 'GLE220', 2015, 255),
     ];
     // polje cenovnik usluga
-    // filijale tj. lokacije na kojima servis posluje
+    public filijale: string[] = [
+				'Nemanjina 14, Beograd, Srbija',
+				'Shakarid 55b, Dubai, UAE',
+				'Dublin, Ireland',
+				'asd 15, Budapest, Hungary',
+    ];
 
 
     constructor(name: string, address: string, desc: string, rating: number) {
